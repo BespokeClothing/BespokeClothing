@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BespokeClothing.API.Domain.Models;
+using BespokeClothing.API.Extensions;
 using BespokeClothing.API.Resource;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,10 @@ namespace BespokeClothing.API.Mapping
         public ModelToResourceProfile()
         {
             CreateMap<Category, CategoryResource>();
+
+            CreateMap<Product, ProductResource>()
+                .ForMember(src => src.UnitOfMeasurement,
+                           opt => opt.MapFrom(src => src.UnitOfMeasurement.ToDescriptionString()));
         }
     }
 }

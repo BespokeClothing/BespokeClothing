@@ -31,7 +31,9 @@ namespace BespokeClothing.API
             services.AddDbContext<AppDbContext>(o => o.UseSqlServer("Data Source=10.131.10.20;Initial Catalog=BespokeClothingDB;user id=Qahospital;password=OnlyQA;"));
 
             services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddAutoMapper(typeof(Startup));
         }
