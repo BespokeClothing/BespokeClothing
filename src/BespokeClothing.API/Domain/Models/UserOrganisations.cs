@@ -11,13 +11,13 @@ namespace BespokeClothing.API.Domain.Models
     {
         [Required]
         [ForeignKey("UserID")]
-        public tblUsers User { get; set; }
+        public Users User { get; set; }
         public int UserID { get; set; }
 
 
         [Required]
         [ForeignKey("OrganisationID")]
-        public tblOrganisations Organisation { get; set; }
+        public Organisations Organisation { get; set; }
         public int OrganisationID { get; set; }
     }
 }

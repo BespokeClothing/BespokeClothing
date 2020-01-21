@@ -11,7 +11,7 @@ namespace BespokeClothing.API.Domain.Models
     {
 
         [ForeignKey("ParentOrganisationID")]
-        public tblOrganisations ParentOrganisation { get; set; }
+        public Organisations ParentOrganisation { get; set; }
         public int ParentOrganisationID { get; set; }
 
         [Required]
@@ -51,7 +51,7 @@ namespace BespokeClothing.API.Domain.Models
 
 
         [ForeignKey("TypeID")]
-        public tblCodes Type { get; set; }
+        public Codes Type { get; set; }
         public int TypeID { get; set; }
 
         [MaxLength(16)]

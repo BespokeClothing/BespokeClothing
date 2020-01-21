@@ -11,12 +11,12 @@ namespace BespokeClothing.API.Domain.Models
     {
         [Required]
         [ForeignKey("ProductID")]
-        public tblProducts Product { get; set; }
+        public Products Product { get; set; }
         public int ProductID { get; set; }
 
         [Required]
         [ForeignKey("OrganisationID")]
-        public tblOrganisations Organisation { get; set; }
+        public Organisations Organisation { get; set; }
         public int OrganisationID { get; set; }
 
         public float StichingPrice { get; set; }

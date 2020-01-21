@@ -11,18 +11,18 @@ namespace BespokeClothing.API.Domain.Models
     {
         [Required]
         [ForeignKey("UserID")]
-        public tblUsers User { get; set; }
+        public Users User { get; set; }
         public int UserID { get; set; }
 
 
         [Required]
         [ForeignKey("OrderID")]
-        public tblOrders Order { get; set; }
+        public Orders Order { get; set; }
         public int OrderID { get; set; }
 
         [Required]
         [ForeignKey("ProductID")]
-        public tblProducts Product { get; set; }
+        public Products Product { get; set; }
         public int ProductID { get; set; }
 
         [MaxLength(16)]
@@ -74,7 +74,7 @@ namespace BespokeClothing.API.Domain.Models
 
         [Required]
         [ForeignKey("TailorID")]
-        public tblUsers Tailor { get; set; }
+        public Users Tailor { get; set; }
         public int TailorID { get; set; }
     }
 }

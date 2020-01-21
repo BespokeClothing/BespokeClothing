@@ -12,11 +12,11 @@ namespace BespokeClothing.API.Domain.Models
 
 
         [ForeignKey("ParentUserID")]
-        public tblUsers ParentUser { get; set; }
+        public Users ParentUser { get; set; }
         public int ParentUserID { get; set; }
 
         [ForeignKey("RoleID")]
-        public tblRoles Role { get; set; }
+        public Roles Role { get; set; }
         public int RoleID { get; set; }
 
         [Required]

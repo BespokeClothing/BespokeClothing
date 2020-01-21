@@ -12,7 +12,7 @@ namespace BespokeClothing.API.Domain.Models
 
         [Required]
         [ForeignKey("SubscriptionTypeID")]
-        public tblSubscriptionTypes SubscriptionType { get; set; }
+        public SubscriptionTypes SubscriptionType { get; set; }
         public int SubscriptionTypeID { get; set; }
 
         
@@ -28,7 +28,7 @@ namespace BespokeClothing.API.Domain.Models
 
         [Required]
         [ForeignKey("StatusID")]
-        public tblCodes Status { get; set; }
+        public Codes Status { get; set; }
         public int StatusID { get; set; }
         public bool IsAutoRenew { get; set; }
     }
