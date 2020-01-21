@@ -28,7 +28,7 @@ namespace BespokeClothing.API
             services.AddControllers();
             //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            services.AddDbContext<AppDbContext>(o => o.UseSqlServer("Data Source=RSINPRTNHLTH\\SQL2017A;Initial Catalog=BespokeClothingDB;user id=sa;password=sa@123456;"));
+            services.AddDbContext<AppDbContext>(o => o.UseSqlServer("Data Source=10.131.10.20;Initial Catalog=BespokeClothingDB;user id=Qahospital;password=OnlyQA;"));
 
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<ICategoryService, CategoryService>();
@@ -44,13 +44,16 @@ namespace BespokeClothing.API
                 app.UseDeveloperExceptionPage();
             }
 
-            else
-            {
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
-            }
+            app.UseRouting();
 
-            app.UseHttpsRedirection();
+            app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
+
+            //app.UseHttpsRedirection();
             //app.UseMvc();
         }
     }
