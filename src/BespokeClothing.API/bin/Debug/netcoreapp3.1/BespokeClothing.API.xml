@@ -4,14 +4,14 @@
         <name>BespokeClothing.API</name>
     </assembly>
     <members>
-        <member name="M:BespokeClothing.API.Domain.Services.Communication.SaveCategoryResponse.#ctor(BespokeClothing.API.Domain.Models.Category)">
+        <member name="M:BespokeClothing.API.Domain.Services.Communication.CategoryResponse.#ctor(BespokeClothing.API.Domain.Models.Category)">
             <summary>
             Creates a success response.
             </summary>
             <param name="category">Saved category.</param>
             <returns>Response.</returns>
         </member>
-        <member name="M:BespokeClothing.API.Domain.Services.Communication.SaveCategoryResponse.#ctor(System.String)">
+        <member name="M:BespokeClothing.API.Domain.Services.Communication.CategoryResponse.#ctor(System.String)">
             <summary>
             Creates am error response.
             </summary>

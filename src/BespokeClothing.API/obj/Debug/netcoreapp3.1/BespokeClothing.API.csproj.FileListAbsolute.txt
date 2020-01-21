@@ -83,6 +83,7 @@ C:\BespokeClothing\src\BespokeClothing.API\bin\Debug\netcoreapp3.1\netcoreapp3.1
 C:\BespokeClothing\src\BespokeClothing.API\bin\Debug\netcoreapp3.1\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\BespokeClothing\src\BespokeClothing.API\bin\Debug\netcoreapp3.1\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\BespokeClothing\src\BespokeClothing.API\bin\Debug\netcoreapp3.1\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\BespokeClothing\src\BespokeClothing.API\obj\Debug\netcoreapp3.1\BespokeClothing.API.csprojAssemblyReference.cache
 C:\BespokeClothing\src\BespokeClothing.API\obj\Debug\netcoreapp3.1\staticwebassets\BespokeClothing.API.StaticWebAssets.Manifest.cache
 C:\BespokeClothing\src\BespokeClothing.API\obj\Debug\netcoreapp3.1\staticwebassets\BespokeClothing.API.StaticWebAssets.xml
 C:\BespokeClothing\src\BespokeClothing.API\obj\Debug\netcoreapp3.1\BespokeClothing.API.MvcApplicationPartsAssemblyInfo.cache
