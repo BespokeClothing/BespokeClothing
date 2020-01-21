@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BespokeClothing.API.Controllers
 {
+    [Route("/api/[controller]")]
     public class ProductsController : Controller
     {
         private readonly IProductService _productService;

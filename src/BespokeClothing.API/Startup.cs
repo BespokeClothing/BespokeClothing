@@ -1,6 +1,7 @@
 using AutoMapper;
 using BespokeClothing.API.Domain.Repositories;
 using BespokeClothing.API.Domain.Services;
+using BespokeClothing.API.Extensions;
 using BespokeClothing.API.Persistence.Contexts;
 using BespokeClothing.API.Persistence.Repositories;
 using BespokeClothing.API.Services;
@@ -25,10 +26,10 @@ namespace BespokeClothing.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
-            //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMemoryCache();
 
-            services.AddDbContext<AppDbContext>(o => o.UseSqlServer("Data Source=10.131.10.20;Initial Catalog=BespokeClothingDB;user id=Qahospital;password=OnlyQA;"));
+            services.AddCustomSwagger();
+            services.AddDbContext<AppDbContext>(o => o.UseSqlServer(Configuration.GetConnectionString("QADatabase")));
 
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
@@ -45,7 +46,7 @@ namespace BespokeClothing.API
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseCustomSwagger();
             app.UseRouting();
 
             app.UseAuthorization();
